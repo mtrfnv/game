@@ -5,6 +5,7 @@ import com.company.model.Player;
 import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * Created by Julia on 08.10.2014.
@@ -39,11 +40,9 @@ public class Game {
      */
     public void init() {
 
-        //todo: исправить этот метод
-        players = new ArrayList<Player>() {{
-            add(new Player("Васян"));
-            add(new Player("Петр"));
-        }};
+        Scanner sc = new Scanner(System.in);
+        players = new ArrayList<Player>();
+        players.add (new Player(sc.nextLine()));
         currentPlayer = players.get(0);
 
         answers = new ArrayList<Boolean>();

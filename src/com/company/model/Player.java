@@ -9,6 +9,7 @@ public class Player {
     private int score;
     private int money;
     private boolean isOverdrawn;
+    private Card card;
 
     public String getName() {
         return name;
